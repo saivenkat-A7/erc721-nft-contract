@@ -28,8 +28,14 @@ The project is fully tested using Hardhat and supports automated execution using
 You can run this project in **two ways**:
 
 ---
+# 1. Run Using Docker (Recommended)
+## Build Docker Image
+docker build -t nft-contract .
 
-#  1. Run Locally (Without Docker)
+## Run Tests
+ docker run --rm nft-contract
+
+#  2. Run Locally (Without Docker)
 
 ### Install Dependencies
 
@@ -39,12 +45,7 @@ npx hardhat compile
 
 npx hardhat test
 
-# 2. Run Using Docker (Recommended)
-## Build Docker Image
-docker build -t nft-contract .
 
-## Run Tests
- docker run --rm nft-contract
 
 ## 🧪 Test Coverage
 
