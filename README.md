@@ -18,22 +18,7 @@ The project is fully tested using Hardhat and supports automated execution using
 
 ---
 
-## 📁 Project Structure
 
-project/
-│
-├── contracts/
-│ └── NftCollection.sol
-│
-├── test/
-│ └── NftCollection.test.js
-│
-├── Dockerfile
-├── .dockerignore
-├── .gitignore
-├── hardhat.config.js
-├── package.json
-└── README.md
 
 
 ---
@@ -61,36 +46,26 @@ docker build -t nft-contract .
 ## Run Tests
  docker run --rm nft-contract
 
- 🧪 Test Coverage
+## 🧪 Test Coverage
 
 The test suite verifies:
 
-Contract initialization
+- Contract initialization
+- Admin-only mint restrictions
+- Successful minting and balance updates
+- Max supply limit enforcement
+- Transfers (`transferFrom`, `safeTransferFrom`)
+- Approvals and operator approvals
+- Reverts for invalid actions
+- Proper event emission (`Transfer`, `Approval`, `ApprovalForAll`)
+- Safe transfers
 
-Admin-only mint restrictions
+---
 
-Successful mint and balance updates
+## 🔧 Tools & Versions
 
-Max supply limit
-
-Transfers (transferFrom, safeTransferFrom)
-
-Approvals and operator approvals
-
-Reverts for invalid actions
-
-Proper event emission
-
-Safe transfers
-
-🔧 Tools & Versions
-
-Solidity: 0.8.20
-
-Hardhat
-
-Mocha & Chai
-
-Node.js (inside Docker)
-
-Docker / Docker Desktop
+- Solidity: 0.8.20
+- Hardhat
+- Mocha & Chai
+- Node.js (inside Docker)
+- Docker / Docker Desktop
